@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "errandr-f6ac1": {
+      "hosting": {
+        "civicaction": [
+          "errandr-f6ac1"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "civicaction",
+      "public": "dist/civicaction",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

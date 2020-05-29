@@ -12,6 +12,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { environment } from '../environments/environment';
 import { LoginComponent } from './components/login/login.component';
+import { ErrandsComponent } from './components/errands/errands.component';
+import { ErrandCreateComponent } from './components/errand-create/errand-create.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { LoginComponent } from './components/login/login.component';
     HomeComponent,
     PageNotFoundComponent,
     SignUpComponent,
-    LoginComponent
+    LoginComponent,
+    ErrandsComponent,
+    ErrandCreateComponent
   ],
   imports: [
     BrowserModule,

@@ -30,7 +30,7 @@ export class SignUpComponent implements OnInit {
       this.auth.auth.createUserWithEmailAndPassword(email, password).then(cred => {
         return this.db.collection('users').doc(cred.user.uid).set({
           age: signupForm['signup-age'].value
-        }).catch( e => {console.log("Email address already in use.")})
+        })
       })
 
       this.auth.auth.onAuthStateChanged(user => {

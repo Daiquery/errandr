@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { FirestoreService, Item } from '../../services/firestore.service';
 import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
@@ -8,15 +9,19 @@ import { AngularFireAuth } from '@angular/fire/auth';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+items: Item[];
 
-  constructor(private auth: AngularFireAuth) { }
+  constructor(
+    private auth: AngularFireAuth,
+    private itemService: FirestoreService
+    
+    ) { }
 
   ngOnInit() {
-    this.auth.auth.onAuthStateChanged(user => {
-      if (user){
-        // load errands
-      }
-    })
+    this.itemService.getItems().subscribe(items => {
+      console.log(items)
+      this.items = items
+    });
 
   }
 
